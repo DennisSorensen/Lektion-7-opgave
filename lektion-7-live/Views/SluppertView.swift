@@ -13,26 +13,35 @@ import SwiftUI
 // TODO: Gør sluppert viewet dynamisk så det kan udfyldes med en enkelt slubbert i stedet for at det er hardkodet til Donald Trump
 
 struct SluppertView: View {
+    
+    @State private var badgeText : String = "4711"
+    
     var body: some View {
-        VStack {
-            Image("Donald")
-                .resizable()
-                .frame(width: 100.0, height: 100.0)
-                .clipShape(Circle())
+        
+        ZStack {
+            VStack {
+                Image("Donald")
+                    .resizable()
+                    .frame(width: 100.0, height: 100.0)
+                    .clipShape(Circle())
+                
+                //Knappen
+                ZStack {
+                    RoundedRectangle(cornerRadius: 5)
+                        .frame(width: 120, height: 40)
+                        .foregroundColor(.blue)
+                    Text("Hello, World!").foregroundColor(.white)
+                }
+                
+                
+            }.padding()
+                .background(Color.white)
+                .cornerRadius(10)
+                .shadow(radius: 5.0)
             
+            BadgeView(badgeText: $badgeText)
             
-            ZStack {
-                RoundedRectangle(cornerRadius: 5)
-                    .frame(width: 120, height: 40)
-                    .foregroundColor(.blue)
-                Text("Hello, World!").foregroundColor(.white)
-            }
-            
-            
-        }.padding()
-            .background(Color.white)
-            .cornerRadius(10)
-            .shadow(radius: 5.0)
+        }.frame(width: 200, height: 200, alignment: .center)
         
     }
 }
