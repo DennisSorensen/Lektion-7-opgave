@@ -16,14 +16,14 @@ struct SrollerView: View {
         
         List {
             
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack {
-                    ForEach(banditter) {sluppert in
-                        SluppertView()
-                    }.padding()
-                }
-
-            }
+//            ScrollView(.horizontal, showsIndicators: false) {
+//                HStack {
+//                    ForEach(banditter) {sluppert in
+//                        SluppertView()
+//                    }.padding()
+//                }
+//
+//            }
 
             
             ForEach(0..<40) {tal in

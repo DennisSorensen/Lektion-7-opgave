@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		954EEE5524294E80002892F2 /* SenesteSluppert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954EEE5424294E80002892F2 /* SenesteSluppert.swift */; };
 		957DF4822427ECF1009EE261 /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957DF4812427ECF1009EE261 /* BadgeView.swift */; };
 		AF6624EA23F97FE200AE4603 /* Sluppert.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6624E923F97FE200AE4603 /* Sluppert.swift */; };
 		AF6624EC23F9828600AE4603 /* SluppertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6624EB23F9828600AE4603 /* SluppertView.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		954EEE5424294E80002892F2 /* SenesteSluppert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenesteSluppert.swift; sourceTree = "<group>"; };
 		957DF4812427ECF1009EE261 /* BadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeView.swift; sourceTree = "<group>"; };
 		AF6624E923F97FE200AE4603 /* Sluppert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sluppert.swift; sourceTree = "<group>"; };
 		AF6624EB23F9828600AE4603 /* SluppertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SluppertView.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				AF6624E923F97FE200AE4603 /* Sluppert.swift */,
+				954EEE5424294E80002892F2 /* SenesteSluppert.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				AF6624EC23F9828600AE4603 /* SluppertView.swift in Sources */,
 				AFA4D50B23FC76910022B099 /* ForEach_Backup.swift in Sources */,
 				AFAE9EB223F342E4004952BA /* DonaldView.swift in Sources */,
+				954EEE5524294E80002892F2 /* SenesteSluppert.swift in Sources */,
 				AFA4D50D23FC7A530022B099 /* ListeView_Backup.swift in Sources */,
 				AFAE9E9D23F3390C004952BA /* AppDelegate.swift in Sources */,
 				AFAE9EB423F34522004952BA /* Shapes.swift in Sources */,

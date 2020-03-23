@@ -10,6 +10,8 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @EnvironmentObject var senesteSluppert : SenesteSluppert
+    
     // Vi indsætter en variabel til at holde vores model
     let banditter = Sluppert.slupperter
     
@@ -67,5 +69,16 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+
+struct SenesteSluppertView : View {
+    @EnvironmentObject var senesteSluppert : SenesteSluppert
+    
+    let banditter = Sluppert.slupperter
+    
+    var body : some View {
+        SluppertView(sluppert: self.banditter[self.senesteSluppert.senesteSluppertIndex])
     }
 }

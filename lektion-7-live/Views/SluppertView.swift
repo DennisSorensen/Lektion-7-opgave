@@ -14,7 +14,8 @@ import SwiftUI
 
 struct SluppertView: View {
     
-    @State private var badgeText : String = "4711"
+    //@State private var badgeText : String = "4711"
+    @ObservedObject var sluppert: Sluppert
     
     var body: some View {
         
@@ -39,7 +40,7 @@ struct SluppertView: View {
                 .cornerRadius(10)
                 .shadow(radius: 5.0)
             
-            BadgeView(badgeText: $badgeText)
+            BadgeView(badgeText: self.$sluppert.badgeText)
             
         }.frame(width: 200, height: 200, alignment: .center)
         
@@ -47,7 +48,10 @@ struct SluppertView: View {
 }
 
 struct SluppertView_Previews: PreviewProvider {
+    
     static var previews: some View {
-        SluppertView()
+        let bandit = Sluppert.slupperter[0]
+        bandit.badgeText = "289434"
+        return SluppertView(sluppert: bandit)
     }
 }
