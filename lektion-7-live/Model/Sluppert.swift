@@ -11,11 +11,19 @@ import SwiftUI
 // En datamodel der er identifiable dvs swiftUI, kan se hver eneste instans som unik
 // Identifiable er en protokol, og den kræver at en instans har en variabel med navnet id
 // UUID() er en Universal Unik Identifier - den er altid unik (i stil med GUID hvis i kender til det.
-struct Sluppert: Identifiable {
+final class Sluppert: Identifiable, ObservableObject { //final er låst, den kan ikke ændres yderligere
+    //ObervableObject søreger for at objektet bliver til en reference
     var id = UUID()
-    var navn: String
-    var profilFoto: Image
-    var partiFarve: Color
+    @Published var navn: String
+    @Published var profilFoto: Image
+    @Published var partiFarve: Color
+    @Published var badgeText : String = "" //Published gør at den sikre sig at trigger en update på ui når der sker en ændring
+    
+    init(navn: String, profilFoto: Image, partiFarve: Color) {
+        self.navn = navn
+        self.profilFoto = profilFoto
+        self.partiFarve = partiFarve
+    }
 }
 
 extension Sluppert {
