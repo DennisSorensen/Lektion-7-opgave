@@ -12,6 +12,9 @@ struct ContentView: View {
     
     @EnvironmentObject var senesteSluppert : SenesteSluppert
     
+    @Environment(\.sizeCategory) var sizeCategory
+    @Environment(\.colorScheme) var currentColorSceme
+    
     // Vi indsætter en variabel til at holde vores model
     let banditter = Sluppert.slupperter
     
